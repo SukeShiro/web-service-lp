@@ -1,0 +1,376 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #111;
+  font-family: system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.container {
+  max-width: 1100px;
+  padding: 0 5%;
+  margin: 0 auto;
+}
+
+.why {
+  padding: 80px 0;
+  background: #f7f7f7;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.why-text {
+  margin-bottom: 16px;
+  max-width: 720px;
+}
+
+.site-footer {
+  padding: 32px 0;
+  border-top: 1px solid #ddd;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: #666;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-nav a {
+  font-size: 12px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-nav {
+    flex-wrap: wrap;
+  }
+}
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #111;
+  color: #fff;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: #111;
+  color: #fff;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #111;
+}
+
+.btn-ghost:hover {
+  background: #111;
+  color: #fff;
+}
+
+.hero {
+  padding: 100px 0;
+}
+.hero .hero-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.hero .hero-kicker {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 16px;
+}
+.hero .hero-title {
+  font-size: 36px;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+.hero .hero-lead {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.hero .hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .hero .hero {
+    padding: 72px 0 56px;
+  }
+  .hero .hero-title {
+    font-size: 30px;
+  }
+  .hero .hero-actions {
+    flex-direction: column;
+  }
+  .hero .btn {
+    width: 100%;
+  }
+}
+
+.why {
+  padding: 80px 0;
+}
+.why .why-text {
+  max-width: 720px;
+  margin: 0 auto 24px;
+  line-height: 1.8;
+}
+
+.problems {
+  padding: 80px 0;
+  background: #f8f8f8;
+}
+.problems .problems-list {
+  max-width: 720px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+.problems .problems-item {
+  background: #fff;
+  padding: 24px 24px 24px 40px;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+.problems .problems-item::before {
+  content: "✔";
+  position: absolute;
+  left: 16px;
+  top: 24px;
+  color: #333;
+  font-size: 14px;
+}
+
+.solutions {
+  padding: 80px 0;
+}
+.solutions .solutions-grid {
+  margin-top: 40px;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.solutions .solution-card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+.solutions .solution-title {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+.solutions .solution-text {
+  font-size: 14px;
+  line-height: 1.8;
+}
+@media (max-width: 768px) {
+  .solutions .solutions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.flow {
+  padding: 80px 0;
+  background: #f8f8f8;
+}
+.flow .flow-list {
+  max-width: 720px;
+  margin: 40px auto 0;
+}
+.flow .flow-item {
+  padding: 24px 0;
+  border-bottom: 1px solid #ddd;
+}
+.flow .flow-title {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.flow .flow-text {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.plans {
+  padding: 80px 0;
+}
+.plans .plans-grid {
+  margin-top: 40px;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.plans .plan-card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+.plans .plan-badge {
+  position: absolute;
+  top: -12px;
+  right: 16px;
+  background: #111;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+.plans .plan-title {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+.plans .plan-price {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+.plans .plan-list {
+  list-style: none;
+  padding: 0;
+}
+.plans .plan-list li {
+  margin-bottom: 8px;
+}
+@media (max-width: 768px) {
+  .plans .plans-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.works {
+  padding: 80px 0;
+}
+.works .works-grid {
+  margin-top: 40px;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.works .work-card img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+}
+.works .work-title {
+  margin-top: 12px;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .works .works-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.faq {
+  padding: 80px 0;
+  background: #f8f8f8;
+}
+.faq .faq-list {
+  max-width: 720px;
+  margin: 40px auto 0;
+}
+.faq .faq-item {
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+}
+.faq .faq-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+.faq .faq-question {
+  font-size: 18px;
+  margin-bottom: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.faq .faq-label {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #111;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.faq .faq-answer {
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.cta {
+  padding: 80px 0;
+}
+.cta .cta-box {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  background: #f8f8f8;
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cta .cta-text {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+/*# sourceMappingURL=style.css.map */
